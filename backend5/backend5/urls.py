@@ -25,6 +25,7 @@ urlpatterns = [
 
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/user/groups/', views.get_user_groups, name='get_user_groups'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

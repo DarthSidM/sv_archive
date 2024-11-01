@@ -11,6 +11,13 @@ function Home(){
     <Link to="/register/teacher">register as teacher</Link>
     <br></br>
     <Link to="/login/teacher">login teacher</Link>
+    <br></br>
+    <Link to="/login/student">login student</Link>
+    <br></br>
+    <Link to="/teacher">teacher home</Link>
+    <br></br>
+    <Link to="/student">student home</Link>
+
     </>
     )
 }

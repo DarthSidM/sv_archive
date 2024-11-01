@@ -69,3 +69,11 @@ def register_teacher(request):
         return Response({"message": "Teacher registered successfully"}, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
+@api_view(['GET'])
+def get_user_groups(request):
+    user_groups = request.user.groups.values_list('name', flat=True)
+    return Response({"groups": list(user_groups)})
